@@ -1,6 +1,6 @@
 const {performance} = require('perf_hooks');
 
-// brute force
+// brute force -- Time Complexity O(n^2)
 var twoSum_brute_force = (nums,target) => {
     for(var i =0; i < nums.length; i++){
         if (i==nums.length-1){
@@ -32,7 +32,7 @@ test_nums = Array.from(Array(100001).keys())
 test_target = 199999
 
 
-// Performance for hash method -- Time Complexity O(n^2)
+// Performance for hash method 
 var start = performance.now();
 
 output = twoSum_hash_method(test_nums,test_target)

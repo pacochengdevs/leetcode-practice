@@ -14,11 +14,12 @@ var twoSum_brute_force = (nums,target) => {
     }
 }
 
-//hash method
+//hash method -- Time Complexity O(n)
 var twoSum_hash_method = (nums,target) =>{
     hash_map = {}
     for(var i = 0; i <nums.length; i++){
         diff = target - nums[i]
+        //seaching key in javascript object is alway O(1)
         if(diff in hash_map){
             return [hash_map[diff],i]
         }
@@ -31,7 +32,7 @@ test_nums = Array.from(Array(100001).keys())
 test_target = 199999
 
 
-// Performance for hash method
+// Performance for hash method -- Time Complexity O(n^2)
 var start = performance.now();
 
 output = twoSum_hash_method(test_nums,test_target)
